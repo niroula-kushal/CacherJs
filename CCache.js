@@ -4,7 +4,7 @@ const CCache = {
         this.Cache.set(key, value);
         return this;
     },
-    Get(key,defaultValue) {
+    Get(key,defaultValue = null) {
         const data = this.Cache.get(key);
         if(typeof data === "undefined") return defaultValue;
         return data;
